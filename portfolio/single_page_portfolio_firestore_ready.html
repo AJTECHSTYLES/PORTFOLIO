@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJ's Portfolio</title>
+  <link rel="stylesheet" href="singlepage_full_animated.css">
+
+</head>
+<body>
+  <!-- Background Elements -->
+  <div class="spline-background">
+    <iframe src="https://my.spline.design/3dtextbluecopy-USZQMKxHMbghnrbJAjRVUDe4/" frameborder="0" width="100%" height="100%"></iframe>
+  </div>
+  <div class="floating-shapes" id="floatingShapes"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home" class="main-section">
+    <div class="intro-text">
+      <img src="me2.jpg" class="profile-pic" alt="AKASH" />
+      <h1>Hello, I'm AKASH</h1>
+      <p>A tech enthusiast passionate about Web Development, AI/ML, UI/UX, and Game Cinematography.</p>
+      <a href="#projectCards" class="view-btn">View Projects ↓</a>
+    </div>
+  </section>
+
+  <section id="about" class="main-section">
+    <div class="intro-text">
+      <h1>About Me</h1>
+      <p>I’m currently pursuing BTech in CSE at ICCS College. My interests lie in building meaningful digital experiences through code, design, and data.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="main-section">
+    <div class="intro-text">
+      <h1>Projects</h1>
+      <p>Here are some of the projects I’ve built using various technologies.</p>
+    </div>
+
+    <!-- Project Grid Section with Scroll Target -->
+    <div class="project-grid" id="projectCards">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="samhitha.jpg" alt="E-Commerce App">
+        <h3>SAMHITHA AI</h3>
+        <p>A Law based chat bot and application which can be used by the law students and common people, its used for the automation and providing of law support to the law sector of india.</p>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src=".jpg" alt="AI Analyzer">
+        <h3>AI Data Analyzer</h3>
+        <p>Built with Python, this tool processes large datasets and gives intelligent predictions and anomaly detection.</p>
+      </div>
+
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="images/chat-app.jpg" alt="Chat App">
+        <h3>Real-Time Chat App</h3>
+        <p>A responsive chat application with WebSocket support, emoji reactions, file sharing, and group chats.</p>
+      </div>
+    </div>
+  </section>
+
+  
+<section id="contact" class="main-section">
+  <div class="intro-text">
+    <h1>Contact</h1>
+<form id="contactForm">
+  <input type="text" id="name" placeholder="Your Name" required><br>
+  <input type="tel" id="phone" placeholder="Contact Number" required><br>
+  <input type="text" id="subject" placeholder="Subject" required><br>
+  <textarea id="message" placeholder="Your Message" rows="4" required></textarea><br>
+  <button type="submit" class="view-btn">Signal</button>
+  <p id="status-message"></p>
+</form>
+    <div class="social-links">
+      <a href="https://instagram.com/yourprofile" target="_blank" class="social-icon">
+        <img src="2111463.png" alt="Instagram" />
+      </a>
+      <a href="https://github.com/yourprofile" target="_blank" class="social-icon">
+        <img src="github-original.svg" alt="GitHub" />
+      </a>
+    </div>
+  </div>
+</section>
+
+    <button id="toggleBtn" class="image-toggle-btn">
+    <img id="toggleImg" src="unnamed.png" alt="Toggle View" />
+  </button>
+
+  <script src="singlepage_updated_FIXED.js"></script>
+
+<!-- Firebase App (non-module) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyCAp1lSissxwIiJmyLvdbeTy6afRax4ubw",
+    authDomain: "my-portfolio-c333.firebaseapp.com",
+    projectId: "my-portfolio-c333",
+    storageBucket: "my-portfolio-c333.firebasestorage.app",
+    messagingSenderId: "740900561152",
+    appId: "1:740900561152:web:11a3efebdce875ec0393e5",
+    measurementId: "G-Y6L8R38NED"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+
+</body>
+</html>

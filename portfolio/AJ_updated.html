@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJ's Portfolio</title>
+  <link rel="stylesheet" href="AJ_updated.css">
+</head>
+<style>
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+</style>
+<body>
+  
+  <!-- Background Elements -->
+  <div class="spline-background">
+    <iframe src="https://my.spline.design/3dtextbluecopy-zlbEVV48Zr1IUzZ9UxiXgRrA/" frameborder="0" width="100%" height="100%"></iframe>
+  </div>
+  <div class="floating-shapes" id="floatingShapes"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home" class="main-section">
+    <div class="intro-text">
+      <img src="aj1.jpg" class="profile-pic" alt="AJ" />
+      <h1>Hello, I'm AJ </h1>
+      <p>A tech enthusiast passionate about Game designing, server developer, Senior staff editor, and Game Cinematography.</p>
+      <a href="#projectCards" class="view-btn">View Projects ↓</a>
+    </div>
+  </section>
+
+  <section id="about" class="main-section">
+    <div class="intro-text">
+      <h1>About Me</h1>
+      <p>I’m currently pursuing as a senior cinematography editor in Spadikam roleplay community and as a cinematographer advisor in Inferno customs. My interests lie in creating breathtaking digital experiences through code, design, and camera angles.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="main-section">
+    <div class="intro-text">
+      <h1>Projects</h1>
+      <p>Here are some of the projects I’ve built using various technologies.</p>
+    </div>
+
+    <!-- Project Grid Section with Scroll Target -->
+    <div class="project-grid" id="projectCards">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <video autoplay loop muted playsinline>
+  <source src="dyna full.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+        <h3>E-Commerce Platform</h3>
+        <p>A full-stack e-commerce solution with secure payment gateway, real-time inventory, and order tracking.</p>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <video autoplay loop muted playsinline>
+  <source src="Project 25.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+        <h3>AI Data Analyzer</h3>
+        <p>Built with Python, this tool processes large datasets and gives intelligent predictions and anomaly detection.</p>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <video autoplay loop muted playsinline>
+  <source src="thnf.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+        <h3>Real-Time Chat App</h3>
+        <p>A responsive chat application with WebSocket support, emoji reactions, file sharing, and group chats.</p>
+      </div>
+    </div>
+  </section>
+
+  
+<section id="contact" class="main-section">
+  <div class="intro-text">
+    <form id="contactForm">
+  <input type="text" id="name" placeholder="Your Name" required><br>
+  <input type="tel" id="contact" placeholder="Contact Number" required><br>
+  <input type="text" id="subject" placeholder="Subject" required><br>
+  <textarea id="message" placeholder="Your Message" rows="4" required></textarea><br>
+  <button type="submit" class="view-btn">Send</button>
+</form>
+
+    <h1>Contact</h1>
+    <form action="mailto:akashpr2005@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="tel" name="contact" placeholder="Contact Number" required><br>
+      <input type="text" name="subject" placeholder="Subject" required><br>
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea><br>
+      <button type="submit" class="view-btn">Send Email</button>
+    </form>
+    <div class="social-links">
+      <a href="https://instagram.com/yourprofile" target="_blank" class="social-icon">
+        <img src="images/instagram-icon.png" alt="Instagram" />
+      </a>
+      <a href="https://github.com/yourprofile" target="_blank" class="social-icon">
+        <img src="images/github-icon.png" alt="GitHub" />
+      </a>
+    </div>
+  </div>
+</section>
+
+    <button id="toggleBtn" class="image-toggle-btn">
+    <img id="toggleImg" src="me1.jpg" alt="Toggle View" />
+    </button>
+
+  <script src="AJ_updated.js"></script>
+</body>
+</html>

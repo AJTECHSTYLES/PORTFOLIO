@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background: transparent;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.spline-background iframe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  border: none;
+}
+
+.main-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.intro-text {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  color: #000;
+  max-width: 700px;
+  animation: popUp 0.6s ease-in-out;
+}
+
+.intro-text:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(106, 13, 173, 0.4);
+  margin-bottom: 1rem;
+}
+
+@keyframes popUp {
+  0% { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.floating-shapes div {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgba(173, 216, 230, 0.2);
+  border-radius: 50%;
+  animation: floatShape 12s linear infinite;
+}
+
+@keyframes floatShape {
+  0% { transform: translateY(0) scale(1); opacity: 0.5; }
+  100% { transform: translateY(-120vh) scale(0.8); opacity: 0; }
+}
+/* (existing styles remain unchanged) */
+
+.project-grid {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4rem; /* increased space */
+  padding-top: 60px; /* spacing from top when linked via anchor */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 1rem;
+  width: 300px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+}
+
+.project-card h3 {
+  margin: 0.5rem 0 0.3rem;
+  color: #6a0dad;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+.view-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: rgba(106, 13, 173, 0.8);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.view-btn:hover {
+  background-color: rgba(106, 13, 173, 1);
+  transform: scale(1.05);
+}
+/* Initial hidden state */
+.project-grid {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+/* Visible state after scroll trigger */
+.project-grid.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.image-toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 0;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.image-toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+.image-toggle-btn img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.project-card video {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+  object-fit: cover;
+}
+
+/* Contact form and social icons */
+form input, form textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  box-shadow: 0 0 5px rgba(106,13,173,0.2);
+}
+
+form textarea {
+  resize: none;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-icon img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+  transform: scale(1.1);
+}
