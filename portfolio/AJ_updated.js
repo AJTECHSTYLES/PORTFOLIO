@@ -34,18 +34,9 @@ window.addEventListener("scroll", handleProjectScroll);
 // Optionally trigger immediately if already in view
 handleProjectScroll();
 const toggleBtn = document.getElementById("toggleBtn");
-const toggleImg = document.getElementById("toggleImg");
 
-let isFirstState = true;
-
-toggleBtn.addEventListener("click", () => {
-  if (isFirstState) {
-    toggleImg.src = "images/view-mode-2.png"; // 🔁 Change image
-    window.location.href = "single_page_portfolio_firestore_ready.html"; // 🔗 Link A
-  } else {
-    toggleImg.src = "images/view-mode-1.png"; // 🔁 Switch back image
-    window.location.href = "AJ_updated.html"; // 🔗 Link B or remove if not needed
-  }
-
-  isFirstState = !isFirstState;
-});
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    window.location.href = "single_page_portfolio_firestore_ready.html";
+  });
+}
